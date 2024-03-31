@@ -1,0 +1,30 @@
+Now, we will learn about tailwind css and props in React
+
+For TAILWIND:
+Step 1- Install Tailwind CSS:
+Install tailwindcss and its peer dependencies, then generate your tailwind.config.js and postcss.config.js files.
+
+Command: "npm install -D tailwindcss postcss autoprefixer", here -D represents dev dependencies
+
+Step 2: To initialize Tailiwind CSS in the project use the following command:
+"npx tailwindcss init -p"
+
+Now, there will be a folder named tailwind.config.js edit that according to the documentation of Tailiwind CSS, and perform the further operation of including Tailwind in the index.css from the documentation itself.
+
+
+Step 3: Now, we can start writing css using Tailiwind CSS in the App.jsx itself as we just need to mention the classes and the Tailiwind will do the styling.
+
+""" Note: For mentioning classes in the html we use "--- className ---" instead of "--- class ---" because class is a reserved keyword in javascript. """
+
+
+##### Props ####
+In React, "props" stands for properties. They are a way to pass information from one React component to another.
+
+Think of React components as building blocks of your web application. Each component can have its own set of properties, or props. These props are like parameters you can pass to a function.
+
+With the use of props one can use that component multiple times.
+
+To understand better let's create a folder in src named components and there we will be storing all the components.
+
+Now, if want to change something in that card let's say heading, then we can create a prop
+

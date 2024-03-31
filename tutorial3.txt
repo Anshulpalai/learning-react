@@ -1,0 +1,41 @@
+Why do we need hooks(like useState, useEffect) in react?
+
+Let's say we want to build a project called counter, which counts the click. For that we can write the following code in javascript:
+
+function App(){
+    let count = 0;
+
+    function addCount(){
+        count += 1;
+    }
+
+    function removeCount(){
+        count -=1;
+    }
+    return(
+        <>
+        <h1>Counter</h1>
+      <h3>A basic React App that counts the click!</h3>
+      <div id='buttons'>
+        <button id="Btn" onClick={addCount}><img src="/icons8-plus-64.png" alt="Plus" /></button>
+        <h2>Clicked: {counter}</h2>
+        <button id="Btn" onClick={removeCount}><img src="/icons8-minus-64.png" alt="Minus" /></button>
+      </div>
+
+        </>
+    )
+}
+
+The above code works correct but there is a problem, that it does not updates "---- Clicked: -----" because there is no dom manipulation performed in the above code. Now React, comes into play and says all these things i will gonna handle. The api calling and fetching information from the server is done using javascript rest UI related operations are handled by REACT.
+
+To change or update the UI we use hooks. 
+
+In React, hooks are like special tools that help you manage the state and behavior of your components. Imagine you're building a house with different rooms (components), and each room has its own set of tools (state and behavior). Hooks are like magic tools that you can use to keep track of things happening in each room without getting confused.
+
+Here are two common types of hooks:
+
+useState Hook: This hook is like a magical drawer where you can keep things you want to remember. For example, if you're building a room where you want to keep track of how many times someone has clicked a button, you can use useState hook to create a special place to store that number. Whenever someone clicks the button, you can update this magical drawer to remember the new count.
+
+useEffect Hook: This hook is like a magical assistant who helps you do things when something in your room changes. For instance, imagine you have a room where you want to fetch some data from the internet when the room first loads. You can use the useEffect hook to tell your magical assistant to fetch the data for you as soon as the room is ready.
+
+So, hooks in React are basically these magical tools that make it easier to manage what's happening inside each room (component) of your house (application). They help you keep track of things and do stuff at the right time without making your head spin!

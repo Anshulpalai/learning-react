@@ -1,0 +1,38 @@
+Flow of the React APP
+
+First lets consider the create-react-app project:
+
+Now to understand the flow of the react app first need to understand why React App is called as SPA(Single Page Application). In react app there is only a single web page named "---- index.html ----" which is present in public folder(for react app build using create-react-app) and in the main directory(for the react app build using create vite@latest). That single page is then rendered only a single time and the changes are made for the elements or components using the react. 
+
+Now, if you go to the public folder >"--- index.html ----" there is no script tag included init, then also there is a script tag injected by the react-scripts (located in the dependencies) into the page. There is a div with the id "root". That div is used to to create our whole app. In the vite app there are no scripts named react-scripts in the package.json but then also the script is added in the web page, for that refer to "------ index.html -----------" then there you will see that there is a script tag like the traditional way.
+
+Now, after that go to the "---- index.js ----" which is the main file to render the web page. In that page you will encounter with a few import statements like the basic one - react, then react-dom -
+
+
+"""""""""""""""""""""
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+"""""""""""""""""""""""""""
+
+
+Now, in the above code ReactDOM basically creates a virtual DOM which is similar to the browser DOM. Then "-------- ReactDOM.createRoot() ---------" is used to create the root of the dom and comparison is done with the main DOM and then perform the necesaary changes. Now, that root is used to render the components and elements into the page. 
+
+React.StrictMode: StrictMode is a helper component in React that allows developers to code more efficiently by highlighting possible problems in their applications.
+
+Now, there is a tag named "---------- <App /> ----------" which is a self closing tag, but is the "jsx". Now to understand let's go to the "------ app.js or app.jsx -------". In that file there is nothing just a function named App() that return the html code inside a fragment "---- <> </> ---". And then that function is exported. 
+
+Now, to create a new component let's say "Hello", we need keep few things in mind while working with while working with create-react-app there is no problem if the component file is named as "hello.js" but there is a problem while working with vite, it will through an error saying kindly write the file name as "hello.jsx". Vite says, the component should be ".jsx" file. 
+
+The function name or the component name should start with the capital letter does not matter if you are creating it with create-react-app or vite.
+
+
+""" WE WILL BE WORKING WITH VITE """

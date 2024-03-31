@@ -1,0 +1,26 @@
+@@@@@@@@@@@@@@@@@@@@@ First Step @@@@@@@@@@@@@@@@@@@@@@
+In the very firt step, we will explore the package.json file.
+
+The package.json file contains the basic requirements and the informations about our project like the name of the project, version of the project, few dependencies like testing libraries, few libraries needed to build the react project like react, react-dom("react-dom is used to create webdev project but react-native is used to build the appdev projects"). Mutiple scripts which we will be using like - 
+# start: to run the react app, 
+
+# build: to build the app for the development phase(build basically converts the react app to format of html, css and js as the browser understands these 3 only),
+
+# eject: if one wants to use another framework after building the app in react then he/she can use the eject script.
+
+# test: In React development, test scripts play a crucial role in guaranteeing the quality and reliability of your code. They automate the execution of test cases, verifying that your components and application behave as expected under various conditions.
+
+
+@@@@@@@@@@@@@@@@@@@@@ Second Step @@@@@@@@@@@@@@@@@@@@@@@@@
+Now, the second step is to understand how different bundlers actually work in building the project.
+
+Create-React-App utility bundle - It can be created using " npx create-react-app appname ". On running this command it will collect all the files and dependencies including the not need one as well.
+
+Vite - Vite is a bundle which helps to create a react app using the command " npm create vite@latest". Then it will ask for the project name and the framework you wanna choose(in our case it will be react). Vite is a build tool that aims to provide a faster and leaner development experience for modern web projects. It consists of two major parts:
+1. A dev server that provides rich feature enhancements over native ES modules, for example extremely fast Hot Module Replacement (HMR).
+2. A build command that bundles your code with Rollup, pre-configured to output highly optimized static assets for production.
+
+@@@@@@@@@@@@@@@@ Third Step @@@@@@@@@@@@@@@@@@@
+Now, the third step is to clean the project, what does that mean.. we will be keeping the required files and removing all the unnecessary files from the src folder, which is not needed right now.. like removing the assests folder, 
+After removing the files which are not required we are left with two files - App.jsx, main.jsx
+
