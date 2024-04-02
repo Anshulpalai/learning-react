@@ -26,5 +26,10 @@ With the use of props one can use that component multiple times.
 
 To understand better let's create a folder in src named components and there we will be storing all the components.
 
-Now, if want to change something in that card let's say heading, then we can create a prop
+Now, if want to change something in that card let's say heading, then we can create a prop for more details refer App.jsx 04_props-tailwind. 
 
+For example, in the components folder we create a component called card.jsx in that we wrote a simple card code. Then that card has to be used multiple times but it should be different from each other. For that we create props for the elements that will changing in each card, like heading, about or p tag, buttons etc. That props are passed a parameters using the curly braces in the function:
+
+"----- function Card({title="About OS", myArr = [1,2,3]}) -----"
+
+In this we have assigned some default values in it like "About OS" and "[1, 2, 3,]". 
