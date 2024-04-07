@@ -15,7 +15,7 @@ function App2(){
 
 // 3. If we say that the react element that we want to inject in the web page at the end of day gets converted into an object then can we directly render the  object that we create in the "---- customReact.js -----"? Lets see:
 
-// Above will throw an error
+// Below will throw an error
 const reactElement = {
   type: "a",
   props: {
@@ -48,7 +48,6 @@ let username = "Anshul Palai" // To render this we can write this in the curly b
 // But the curly braces can only contain the evaluation expression. Now there will be a question, why we cannot write everything in the {} while rendering. Now, how this varible is passed in the element created using React.createElement():
 
 const injectingVar = React.createElement('span',{}, "Injection Variables in the page ", username)
-
 
 
 
